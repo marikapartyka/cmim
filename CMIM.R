@@ -1,6 +1,6 @@
-# szybki
+#fast version
 
-# Ładowanie wymaganych pakietów
+# Loading required packages
 
 if(!require(mlbench)){
   install.packages("mlbench")
@@ -12,7 +12,7 @@ if(!require(mlbench)){
   library(infotheo)
 }
 
-# rozwiązanie
+# Implementation
 
 CMIMselection<-function(X,y, kmax){
   
@@ -53,7 +53,7 @@ CMIMselection<-function(X,y, kmax){
 
 
 data("BreastCancer")
-obserwacje_bez_NA <- complete.cases(BreastCancer)
+rows_without_NA <- complete.cases(BreastCancer)
 X <- BreastCancer[obserwacje_bez_NA , -c(1, 11)]
 y <- BreastCancer[obserwacje_bez_NA , 11]
 
